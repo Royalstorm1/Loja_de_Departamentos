@@ -1,19 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import Loja from "./src/components/loja.screen";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Loja de Departamentos</Text>
-    </View>
-  );
-}
+  const loja = {
+  	imagem: require("./assets/lojadedepartamentos.png"),
+  	nome: "Loja de Departamentos",
+  	descricao: "Está loja tem diversas coisas, como TUDO O QUE VOCÊ PRECISAR."
+  };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+  return <Loja loja={loja} />
+}
